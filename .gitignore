@@ -4,3 +4,5 @@ log/*.log
 tmp/
 .sass-cache/
 *.txt
+mockup/*
+.DS_Store
