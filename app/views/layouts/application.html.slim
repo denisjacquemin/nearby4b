@@ -19,7 +19,8 @@ html
         h1 The titre
         nav class="sixteen columns clearfix"
           ul
-            li class="first" Community
+            li class="first"
+              = link_to 'Community', communities_path
             li People
       = yield
       footer class="sixteen columns clearfix"

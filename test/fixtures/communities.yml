@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  deleted_at: 2011-07-25 08:03:14
+  deleted: false
+
+two:
+  name: MyString
+  description: MyText
+  deleted_at: 2011-07-25 08:03:14
+  deleted: false

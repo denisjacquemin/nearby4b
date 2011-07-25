@@ -55,6 +55,14 @@
         
     }
     
+    input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	textarea, 
+	select {
+	    width: 350px;
+    }
+    
     
 /* #Page Styles
 ================================================== */
