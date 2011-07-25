@@ -1,4 +1,6 @@
 Nearby4b::Application.routes.draw do
+  resources :people
+
   resources :communities
 
   # The priority is based upon order of creation:
