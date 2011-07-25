@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title change me
+    meta charset="utf-8"
+    meta name="description" content=""
+    meta name="author" content="Denis Jacquemin"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    /[if lt IE 9]
+      script src='http://html5shim.googlecode.com/svn/trunk/html5.js'
+    = stylesheet_link_tag "application"
+    link rel="shortcut icon" href="images/favicon.ico"
+	link rel="apple-touch-icon" href="images/apple-touch-icon.png"
+	link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"
+	link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"
+  body
+    div class="container"
+      header
+        h1 The titre
+        nav class="sixteen columns clearfix"
+          ul
+            li class="first" Community
+            li People
+      = yield
+      footer class="sixteen columns clearfix"
+        hr
+    = javascript_include_tag "application"
+      
