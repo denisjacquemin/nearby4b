@@ -25,7 +25,8 @@ class LocationsController < ApplicationController
   # GET /locations/new.json
   def new
     @location = Location.new
-
+    @location.person_id = params[:person_id]
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @location }
@@ -41,7 +42,8 @@ class LocationsController < ApplicationController
   # POST /locations.json
   def create
     @location = Location.new(params[:location])
-
+    @location.planner_id = 1 #current_user.id
+    
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }

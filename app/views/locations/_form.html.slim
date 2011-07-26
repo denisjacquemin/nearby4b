@@ -7,6 +7,7 @@
       - @location.errors.full_messages.each do |msg|
         li= msg
 
+  = f.hidden_field :person_id
   div class="field"
     = f.label :address
     = f.text_field :address
@@ -16,11 +17,5 @@
   div class="field"
     = f.label :end_date
     = f.datetime_select :end_date
-  div class="field"
-    = f.label :person_id
-    = f.number_field :person_id
-  div class="field"
-    = f.label :planner_id
-    = f.number_field :planner_id
   div class="actions"
     = f.submit
