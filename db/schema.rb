@@ -10,13 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110725164131) do
+ActiveRecord::Schema.define(:version => 20110726054254) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "deleted_at"
     t.boolean  "deleted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "person_id"
+    t.integer  "planner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

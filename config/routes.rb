@@ -1,4 +1,6 @@
 Nearby4b::Application.routes.draw do
+  resources :locations
+
   resources :people
 
   resources :communities
