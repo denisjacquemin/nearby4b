@@ -8,6 +8,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :gsm
       t.text :description
       t.integer :community_id
+      t.integer :role_id
 
       t.timestamps
     end

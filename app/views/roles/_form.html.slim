@@ -1,0 +1,17 @@
+= form_for(@role) do |f|
+  - if @role.errors.any?
+    div id="error_explanation"
+      h2= "#{pluralize(@role.errors.count, "error")} prohibited this role from being saved:"
+
+      ul
+      - @role.errors.full_messages.each do |msg|
+        li= msg
+
+  div class="field"
+    = f.label :name
+    = f.text_field :name
+  div class="field"
+    = f.label :community
+    = f.collection_select(:community_id, Community.all, :id, :name, {}, :class => '')
+  div class="actions"
+    = f.submit

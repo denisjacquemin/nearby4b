@@ -3,6 +3,5 @@ class Community < ActiveRecord::Base
   
   validates :name, :presence => true
   
-  
   scope :all, Community.order("name ASC")
 end

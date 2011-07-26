@@ -27,5 +27,13 @@
   div class="field"
     = f.label :community
     = f.collection_select(:community_id, Community.all, :id, :name, {}, :class => '')
+  - unless @person.new_record?
+    div class="field"
+        = f.label :role
+        - Role.all_by_community(@person.community_id).each do |role|
+          -#= f.check_box, :role_id
+          = role.name
+        
+        -#= f.collection_select(:role_id, Role.all_by_community(@person.community_id), :id, :name, {}, :class => '')
   div class="actions"
     = f.submit
