@@ -44,9 +44,6 @@ class CommunitiesController < ApplicationController
 
     respond_to do |format|
       if @community.save
-        ['Community Manager', 'Member', 'Contact'].each{ |r|
-          Role.create(:name => r, :community_id => @community.id)
-        }
         format.html { redirect_to @community, notice: 'Community was successfully created.' }
         format.json { render json: @community, status: :created, location: @community }
       else

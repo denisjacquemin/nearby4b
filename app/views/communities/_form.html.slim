@@ -12,13 +12,15 @@
   div class="field"
     = f.label :description
     = f.text_area :description, :rows => 5, :cols => 40
-  
-  - if false
-    div class="field"
-      = f.label :deleted_at
-      = f.datetime_select :deleted_at
-    div class="field"
-      = f.label :deleted
-      = f.check_box :deleted
+      
+  div class="field"
+    = f.label :deleted_at
+    = f.datetime_select :deleted_at
+  div class="field"
+    = f.label :deleted
+    = f.check_box :deleted
+      
+    
+    
   div class="actions"
     = f.submit

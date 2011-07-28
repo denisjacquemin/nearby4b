@@ -5,4 +5,5 @@ class Person < ActiveRecord::Base
   has_and_belongs_to_many :roles
   
   validates :community_id, :firstname, :lastname, :presence => true
+  
 end

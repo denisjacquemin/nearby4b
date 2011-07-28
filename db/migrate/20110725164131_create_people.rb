@@ -9,6 +9,11 @@ class CreatePeople < ActiveRecord::Migration
       t.text :description
       t.integer :community_id
       t.integer :role_id
+      t.boolean :community_manager
+      t.boolean :member
+      t.boolean :contact
+      t.boolean :planner
+      t.boolean :community_sponsor
 
       t.timestamps
     end

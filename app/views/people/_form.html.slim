@@ -24,16 +24,22 @@
   div class="field"
     = f.label :description
     = f.text_area :description
-  div class="field"
-    = f.label :community
-    = f.collection_select(:community_id, Community.all, :id, :name, {}, :class => '')
-  - unless @person.new_record?
+  - if @person.new_record?
     div class="field"
-        = f.label :role
-        - Role.all_by_community(@person.community_id).each do |role|
-          -#= f.check_box, :role_id
-          = role.name
-        
-        -#= f.collection_select(:role_id, Role.all_by_community(@person.community_id), :id, :name, {}, :class => '')
+      = f.label :community
+      = f.collection_select(:community_id, Community.all_by, :id, :name, {}, :class => '')
+
+  div class="field"
+      = f.label :community_manager
+      = f.check_box :community_manager
+      = f.label :community_manager
+      = f.check_box :community_manager
+      = f.label :member
+      = f.check_box :member
+      = f.label :contact
+      = f.check_box :contact
+      = f.label :planner
+      = f.check_box :planner
+      
   div class="actions"
     = f.submit
