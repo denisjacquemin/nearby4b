@@ -1,4 +1,10 @@
 Nearby4b::Application.routes.draw do
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "communities#index"
+  resources :users
+  resources :sessions
+    
   resources :locations
 
   resources :people
